@@ -1,6 +1,7 @@
 <template>
   <main>
-    {{appNumber}}
+    <!-- {{appNumber}} -->
+    {{ appNumber }}
     <Controller :changeNumber="changeNumber"/>
   </main>
 </template>
@@ -11,14 +12,19 @@ export default {
   components: {
     Controller
   },
-  data() {
-    return {
-      appNumber: 0
-    };
-  },
+  // data() {
+  //   return {
+  //     appNumber: 0
+  //   };
+  // },
   methods: {
     changeNumber(val) {
       this.appNumber = this.appNumber + val;
+    }
+  },
+  computed: {
+    appNumber() {
+      return this.$store.state.appNumber;
     }
   }
 };
