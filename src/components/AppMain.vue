@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     appNumber() {
-      return this.$store.state.appNumber;
+      return this.$store.getters.appNumber;
     }
   }
 };
