@@ -7,8 +7,15 @@ const state = {
   appNumber: 0
 };
 
+const mutations = {
+  changeNumber(state, value) {
+    state.appNumber = state.appNumber + value;
+  }
+};
+
 const store = new Vuex.Store({
-  state
+  state,
+  mutations
 });
 
 export default store;

@@ -19,7 +19,8 @@ export default {
   // },
   methods: {
     changeNumber(val) {
-      this.appNumber = this.appNumber + val;
+      // this.appNumber = this.appNumber + val;
+      this.$store.commit("changeNumber", val);
     }
   },
   computed: {
