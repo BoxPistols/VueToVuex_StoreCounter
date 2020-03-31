@@ -12,15 +12,10 @@ export default {
   components: {
     Controller
   },
-  // data() {
-  //   return {
-  //     appNumber: 0
-  //   };
-  // },
   methods: {
     changeNumber(val) {
       // this.appNumber = this.appNumber + val;
-      this.$store.commit("changeNumber", val);
+      this.$store.dispatch("changeNumber", val);
     }
   },
   computed: {

@@ -12,7 +12,11 @@ const getters = {
     return state.appNumber;
   }
 };
-
+const actions = {
+  changeNumber({ commit }, val) {
+    commit("changeNumber", val);
+  }
+};
 const mutations = {
   changeNumber(state, value) {
     state.appNumber = state.appNumber + value;
@@ -22,6 +26,7 @@ const mutations = {
 const store = new Vuex.Store({
   state,
   mutations,
+  actions,
   getters
 });
 
